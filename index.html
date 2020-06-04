@@ -11,28 +11,31 @@
   <meta name="author" content="trendytheme.net">
   <title>Coming Soon</title>
 
+  <!--// FavIcons //-->
   <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon.png">
+  <!--// FavIcons //-->
 
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="assets/img/ico/apple-touch-icon-57-precomposed.png">
+  <!--// Fonts //-->
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
+  <!--// Fonts //-->
 
+  <!--// Stylesheets //-->
   <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
   <link href="assets/fonts/iconfont/material-icons.css" rel="stylesheet">
-
   <link href="assets/css/animated-headline.css" rel="stylesheet">
-
   <link href="assets/css/shortcodes/shortcodes.css" rel="stylesheet">
-
   <link href="assets/materialize/css/materialize.min.css" rel="stylesheet">
-
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <link href="style.css" rel="stylesheet">
+  <!--// Stylesheets //-->
+
+  <!--// JavaScript //-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!--// JavaScript //-->
 
 </head>
 
@@ -48,8 +51,7 @@
           </div>
           <div class="mb-50">
             <h1 class="intro-title black-text text-uppercase">En construction...</h1>
-            <p class="sub-intro lead">Une nouvelle compagnie avec pour mission de digitaliser l'Afrique via
-              les ressources du web va bientôt voir le jour.
+            <p class="sub-intro lead">Une nouvelle compagnie avec pour mission d'apporter le digital dans le quotidien des Africains va bientôt voir le jour.
               Entrez votre adresse électronique, &
               prenez part en avance !</p>
           </div>
@@ -57,11 +59,11 @@
             <ul class="countdown">
               <li>
                 <span class="days">{40}</span>
-                <p>days</p>
+                <p>Jours</p>
               </li>
               <li>
                 <span class="hours">{00}</span>
-                <p>hours </p>
+                <p>Heure </p>
               </li>
               <li>
                 <span class="minutes">{00}</span>
@@ -69,7 +71,7 @@
               </li>
               <li>
                 <span class="seconds">{00}</span>
-                <p>seconds</p>
+                <p>secondes</p>
               </li>
             </ul>
           </div>
@@ -98,7 +100,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2 class="font-25 text-bold text-uppercase mb-30">About startup</h2>
+          <h2 class="font-25 text-bold text-uppercase mb-30">A propos de ADGroup</h2>
           <p>materialize material design multi-purpose html template. It comes with huge content and background
             variants. <a href="#">materialize</a> is an awesome new company for web resources is coming very soon. We
             are nearly there..</p>
@@ -168,6 +170,7 @@
           data-section="#top">
           <i class="material-icons">&#xE316;</i>
         </a>
+<!--
         <ul class="social-link tt-animate ltr mt-20">
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -178,13 +181,17 @@
           <li><a href="#"><i class="fa fa-rss"></i></a></li>
         </ul>
         <hr class="mt-15">
-        <div class="row">
+ -->        <div class="row">
           <div class="col-md-12">
             <div class="footer-logo">
               <img src="assets/img/logo-white.png" alt="">
             </div>
-            <span class="copy-text">Copyright &copy; 2016 <a href="#">Materialize</a> &nbsp; | &nbsp; All Rights
-              Reserved &nbsp; | &nbsp; Designed By <a href="#">TrendyTheme</a></span>
+            <span class="copy-text">
+              Copyright &copy; 2020
+              <a href="#">ADGroup</a>
+              &nbsp; | &nbsp; Tous droit reserve &nbsp; | &nbsp; Designe with
+              <a href="{{ $adGroupUrl }}">ADGroup</a>
+            </span>
             <div class="footer-intro">
               <p>Penatibus tristique velit vestibulum adipiscing habitant aenean feugiat at condimentum aptent odio orci
                 vulputate hac mollis a.Vestibulum adipiscing gravida justo a ac euismod vitae.</p>
@@ -234,15 +241,25 @@
   <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
   <script src="vendor/countdowntime/countdowntime.js"></script>
   <script>
+    var $releaseDate = new Date('Jully 30, 2020 23:59:59');
+    var $adGroupUrl = "https://adgroupe.io";
+    var $today = new Date();
+    var $seconds = Math.floor(($releaseDate - ($today))/1000);
+    var $minutes = Math.floor($seconds/60);
+    var $hours = Math.floor($minutes/60);
+    var $days = Math.floor($hours/24);
+    $hours -= $days*24;
+    $minutes -= ($days*24*60)-($hours*60);
+    $seconds -= ($days*24*60*60)-($hours*60*60)-($minutes*60);
     $('.countdown').countdown100({
       /*Set Endtime here*/
       /*Endtime must be > current time*/
       endtimeYear: 0,
       endtimeMonth: 0,
       endtimeDate: 35,
-      endtimeHours: 18,
-      endtimeMinutes: 0,
-      endtimeSeconds: 0,
+      endtimeHours: $hours,
+      endtimeMinutes: $minutes,
+      endtimeSeconds: $seconds,
       timeZone: ""
       // ex:  timeZone: "America/New_York"
       //go to " http://momentjs.com/timezone/ " to get timezone
