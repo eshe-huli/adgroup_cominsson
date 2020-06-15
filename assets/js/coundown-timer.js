@@ -6,8 +6,8 @@
 
 		//array of custom settings
 		var settings = { 
-			'date': null,
-			'format': null
+			'date': new Date('2020/07/03 23:59:59'),
+			'format': ('Y/m/d H:i:s')
 		};
 
 		//append the settings array to options
