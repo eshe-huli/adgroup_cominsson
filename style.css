@@ -22,7 +22,13 @@ body {
     padding: 3px;
 }
 
+.reduceMarginTop{
+    margin-top:-20px
+}
 
+.reduceMarginBottum{
+    margin-bottom:-20px
+}
 
 html {
     font-family: raleway, sans-serif !important;

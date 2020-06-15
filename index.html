@@ -51,13 +51,12 @@
               <img src="assets/img/logo/logo-ADGroup-big.png" alt="" height="180px">
             </a>
           </div>
-          <div class="mb-50">
+          <div class="reduceMarginTop">
             <h1 class="intro-title black-text text-uppercase">En construction...</h1>
-            <p class="sub-intro lead">Une nouvelle compagnie avec pour mission d'apporter le digital dans le quotidien des Africains va bientôt voir le jour.
-              Entrez votre adresse électronique, &
-              prenez part en avance !</p>
+            <p class="sub-intro lead">Une nouvelle compagnie avec pour mission de fournir aux Africains un accès à des produits et services de qualité. <br>
+              La priorité de notre entreprise, c’est le développement. C'est pourquoi notre mission consiste à traduire les problèmes africains en services ou produits de qualité accessibles à tous.</p>
           </div>
-          <div class="countdown-wrapper">
+          <div class="countdown-wrapper reduceMarginBottum">
             <ul class="countdown">
               <li>
                 <span class="days">{$days}</span>
@@ -77,18 +76,18 @@
               </li>
             </ul>
           </div>
-          <div class="row">
+          <div class="row reduceMarginTop">
             <div class="col-md-6 col-md-offset-3">
               <div class="subscribe-wrapper text-center">
                 <form class="subscribe-form mailchimp" action="" method="post">
                   <div class="input-field">
                     <label class="sr-only" for="email">Email</label>
-                    <input id="subscribeEmail" type="email" name="subscribeEmail" class="validate">
+                    <input id="subscribeEmail" type="email" name="subscribeEmail" class="validate" required>
                     <label for="subscribeEmail" data-error="wrong" data-success="right">Entrez votre adresse
                       email</label>
                   </div>
                   <button type="submit" class="btn btn-lg pink waves-effect waves-light mt-30 text-capitalize">Inscrivez
-                    vous </button>
+                    vous à notre newsletter </button>
                   <p class="subscription-success text-center grey-text"></p>
                 </form>
               </div>
@@ -103,9 +102,10 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="font-25 text-bold text-uppercase mb-30">A propos de ADGroup</h2>
-          <p>ADGroup est une startup d'ingénierie informatique et de services, détectant les opportunités de croissance en Afrique, pour les transformer en business.
-          La priorité de notre entreprise, c’est le développement. C'est pourquoi notre mission consiste à traduire les problèmes africains en services ou produits de qualité accessibles à tous.
-            Notre mission, redefinir le sens du digital. Bientôt..</p>
+          <p>
+            ADGroup est une startup d'ingénierie informatique et de services, <br> elle est composée d’experts aux compétences complémentaires <br> stratégiquement orientée vers l'action pour détecter les opportunités <br> de croissance en Afrique, puis les transformer en de véritables entreprises, <br> gage de développement économique, qui auront des impacts tangibles sur nos populations.
+          </p>
+          <!--
           <div class="progress-section">
             <span class="progress-title mb-30"><i class="cu fa fa-palette"></i> - UX Design</span>
             <div class="progress">
@@ -132,34 +132,35 @@
                 <span>99%</span>
               </div>
             </div>
+          -->
           </div>
-        </div>
-        <div class="col-md-5 col-md-offset-1">
+        <div class="col-md-6">
           <h2 class="font-25 text-bold text-uppercase mb-30">Vous avez une question?</h2>
-          <p>Vous pouvez utiliser le formulaire de contact ci-dessous ou nous contacter par e-mail à l'adresse <a href="mailto:info@adgroupe.io">info@adgroupe.io</a>.</p>
-          <form class="comingsoon-contact" name="contact-form" id="contactForm" action="mailto:info@adgroupe.io" method="POST" enctype="text/plain">
+          <p>Vous pouvez utiliser le formulaire de contact ci-dessous ou nous contacter par e-mail à l'adresse <a href="mailto:contact@adgroupe.io">contact@adgroupe.io</a>.</p>
+          <form class="comingsoon-contact" name="contact-form" id="contactForm" action="mailer.php" method="POST" enctype="text/plain">
             <div class="row">
               <div class="col-md-6">
                 <div class="input-field">
-                  <input type="text" name="name" class="validate" id="name">
+                  <input type="text" name="name" class="validate" id="name" required>
                   <label for="name">Nom</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="input-field">
                   <label class="sr-only" for="email">Email</label>
-                  <input id="email" type="email" name="email" class="validate">
+                  <input id="email" type="email" name="email" class="validate" required>
                   <label for="email" data-error="wrong" data-success="right">Email</label>
                 </div>
               </div>
             </div>
             <div class="input-field">
-              <textarea name="message" id="message" class="materialize-textarea"></textarea>
+              <textarea name="message" id="message" class="materialize-textarea" required></textarea>
               <label for="message">Message</label>
             </div>
             <button type="submit" name="submit"
-              class="waves-effect waves-light btn submit-button pink mt-30 text-capitalize">Envoyer</button>
+              class="waves-effect waves-light btn submit-button pink mt-20 text-capitalize">Envoyer</button>
           </form>
+        </div>
         </div>
       </div>
     </div>
@@ -191,7 +192,7 @@
               Copyright &copy; 2020
               <a href="#">ADGroup</a>
               &nbsp; | &nbsp; Tous droit reserve &nbsp; | &nbsp; Designe with ❤️ by
-              <a href="{{ $adGroupUrl }}">ADGroup</a>
+              <a href="https://www.adgroupe.io">ADGroup</a>
             </span>
             <div class="footer-intro">
               <p>Notre mission, redefinir le digital.</p>
@@ -215,7 +216,7 @@
 
   <div id="preloader">
     <div class="preloader-position">
-      <img src="assets/img/logo/logo-ADGroup-big.png" alt="logo">
+      <img src="assets/img/logo/logo-ADGroup-big.png" width="210px" alt="logo">
       <div class="progress">
         <div class="indeterminate"></div>
       </div>
@@ -242,8 +243,8 @@
   <script src="vendor/countdowntime/countdowntime.js"></script>
   <script>
     var $releaseDate = new Date('Jully 30, 2020 23:59:59');
-    var $adGroupUrl = "https://adgroupe.io";
-    var $infoMail = "info@adgroupe.io";
+    var $adGroupUrl = "https://www.adgroupe.io";
+    var $contactMail = "contact@adgroupe.io";
     var $today = new Date();
     var $secondslaps = Math.floor(($releaseDate - ($today))/1000);
     var $days = Math.floor($secondslaps/3600/24);
