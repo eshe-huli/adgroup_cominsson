@@ -2291,9 +2291,14 @@ nav ul a {
 }
 
 #preloader .progress .indeterminate {
-    background: #03a9f4
+    background: #03a9f4;
 }
-
+#logo{
+  height: 180px;
+}
+#preloader-logo{
+  width: 210px;
+}
 @media screen and (max-width:768px) {
   * {
     text-align: center;
