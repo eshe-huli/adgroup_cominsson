@@ -2259,16 +2259,9 @@ nav ul a {
     transform: scale(90)
 }
 
-@media screen and (max-width:768px) {
-    .search-trigger i {
-        line-height: 48px
-    }
-
-    .search-trigger .search-btn {
-        margin-top: 6px
-    }
+.countdown{
+  font-size: 1.3rem!important;
 }
-
 #preloader {
     position: fixed;
     top: 0;
@@ -2299,4 +2292,41 @@ nav ul a {
 
 #preloader .progress .indeterminate {
     background: #03a9f4
+}
+
+
+@media screen and (max-width:768px) {
+    .days, .hours, .minutes, .seconds{
+      margin: 0;
+      padding: 0;
+      height: 20px;
+    }
+    .countdown li{
+      margin-left: 0!important;
+    }
+    .search-trigger i {
+        line-height: 48px
+    }
+
+    .search-trigger .search-btn {
+        margin-top: 6px
+    }
+    #preloader {
+      display: none;
+  }
+  .bg-cover, [class*=banner-]{
+    background-image: none;
+    background-color: #ebebeb!important;
+    background-size: cover !important;
+  }
+  .footer-logo img{
+    width: 80%;
+  }
+  .countdown{
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  .coundown li{
+    width: 40%;
+  }
 }
