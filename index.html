@@ -200,7 +200,6 @@
       <script src="assets/materialize/js/materialize.min.js"></script>
       <script src="assets/js/jquery.easing.min.js"></script>
       <script src="assets/js/coundown-timer.js"></script>
-      <script src="assets/js/smoothscroll.min.js"></script>
       <script src="assets/js/jquery.stellar.min.js"></script>
       <script src="assets/js/imagesloaded.js"></script>
       <script src="assets/js/jquery.inview.min.js"></script>
@@ -223,9 +222,6 @@
          var $minutes = Math.floor(($secondslaps/60) - ($hours*60 + $days*24*60));
          var $seconds = Math.floor(($secondslaps) - (($days*24*3600) + ($hours*3600) + ($minutes*60)));
 
-         console.log(
-           $seconds
-         );
          $('.countdown').countdown100({
            /*Set Endtime here*/
            /*Endtime must be > current time*/
@@ -240,13 +236,5 @@
            //go to " http://momentjs.com/timezone/ " to get timezone
          });
       </script>
-      <!--===============================================================================================-->
-      <script src="vendor/tilt/tilt.jquery.min.js"></script>
-      <script>
-         $('.js-tilt').tilt({
-           scale: 1.1
-         })
-      </script>
-      <!--===============================================================================================-->
    </body>
 </html>
