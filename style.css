@@ -2294,12 +2294,14 @@ nav ul a {
     background: #03a9f4
 }
 
-
 @media screen and (max-width:768px) {
+  * {
+    text-align: center;
+    margin: auto;
+  }
     .days, .hours, .minutes, .seconds{
       margin: 0;
       padding: 0;
-      height: 20px;
     }
     .countdown li{
       margin-left: 0!important;
@@ -2327,6 +2329,6 @@ nav ul a {
     align-content: flex-start;
   }
   .coundown li{
-    width: 40%;
+    width: 30%;
   }
 }
